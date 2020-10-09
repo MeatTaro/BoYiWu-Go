@@ -20,7 +20,7 @@ func (e *email) To(s string) {
 func (e *email) Send() {
 	fmt.Printf("From: %s , To: %s\n",e.from, e.to)
 }
-//此方法會在goroutine同步執行時造成pointer互相覆蓋,導致依序行喪失
+//此方法會在goroutine同步執行時造成pointer互相覆蓋,導致依序性喪失
 // func main()  {
 // 	e := &email{}
 // 	for  i:=0; i < 10; i++ {
